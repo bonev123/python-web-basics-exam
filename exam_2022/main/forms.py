@@ -8,6 +8,23 @@ class CreateProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('username', 'email', 'age')
+        widgets = {
+            'username': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter username',
+                }
+            ),
+            'email': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter email',
+                }
+            ),
+            'age': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter age',
+                }
+            )
+        }
 
 
 class DeleteProfileForm(forms.ModelForm):
@@ -28,12 +45,76 @@ class CreateAlbumForm(forms.ModelForm):
     class Meta:
         model = Album
         fields = ('album_name', 'artist', 'genre', 'description', 'image_url', 'price')
+        widgets = {
+            'album_name': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter an album name',
+                }
+            ),
+            'artist': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter artist name',
+                }
+            ),
+            'genre': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter album genre',
+                }
+            ),
+            'description': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter album description',
+                }
+            ),
+            'image_url': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter URL',
+                }
+            ),
+            'price': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter album price',
+                }
+            ),
+        }
 
 
 class EditAlbumForm(forms.ModelForm):
     class Meta:
         model = Album
         fields = ('album_name', 'artist', 'genre', 'description', 'image_url', 'price')
+        widgets = {
+            'album_name': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter an album name',
+                }
+            ),
+            'artist': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter artist name',
+                }
+            ),
+            'genre': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter album genre',
+                }
+            ),
+            'description': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter album description',
+                }
+            ),
+            'image_url': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter URL',
+                }
+            ),
+            'price': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter album price',
+                }
+            ),
+        }
 
 
 class DeleteAlbumForm(forms.ModelForm):
